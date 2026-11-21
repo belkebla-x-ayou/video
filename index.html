@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="sapphire">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anisaphir</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Background Canvas for Animated Glowing Particles -->
+    <canvas id="particles-bg"></canvas>
+
+    <header>
+        <nav>
+            <ul>
+                <img src="assets/channel-logo.png" alt="Logo">
+                <p>ANISAPHIR</p>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#presentation">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                
+                <!-- Theme Switcher Button -->
+                <li>
+                    <button id="theme-btn" class="nav-btn theme-btn" title="Changer de thème" aria-label="Changer de thème">
+                        🎨 <span id="theme-name">Saphir</span>
+                    </button>
+                </li>
+
+                <!-- Sound FX Toggle Button removed -->
+
+                <!-- Language Switcher -->
+                <li><a href="#" id="lang-btn">EN/FR/AR</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section with Typewriter Effect & Floating Badges -->
+        <section id="hero" class="hero tilt-card">
+            <h1>Anisaphir</h1>
+            <p class="hero-typewriter">
+                <span id="typewriter-text"></span><span class="typewriter-cursor">|</span>
+            </p>
+
+            <!-- Floating Glow Badges -->
+            <div class="hero-badges">
+                <div class="glow-badge">
+                    <span class="badge-icon">⚡</span>
+                    <span class="badge-text" data-key="badgeAnime">100% Anime & Manga</span>
+                </div>
+                <div class="glow-badge">
+                    <span class="badge-icon">💎</span>
+                    <span class="badge-text" data-key="badgeHD">Qualité HD</span>
+                </div>
+                <div class="glow-badge">
+                    <span class="badge-icon">🔥</span>
+                    <span class="badge-text" data-key="badgeTrending">Contenu Tendance</span>
+                </div>
+            </div>
+
+            <div class="hero-actions">
+                <a href="#presentation" class="btn-primary" id="btn-discover">Découvrir</a>
+                <a href="#contact" class="btn-secondary" id="btn-contact">Contactez-moi</a>
+            </div>
+        </section>
+
+        <!-- Presentation Section with 3D Tilt -->
+        <section id="presentation" class="presentation tilt-card">
+            <p>ANISAPHIR. est mas petite channe qui j'ais fais pour que elle vas etre pour le grands publique, et mois
+                je fais pas les video a ma main je fais que republier les video de otre youtuber
+            </p>
+            <p>Comme</p>
+            <div class="creators-list">
+                <a href="https://www.youtube.com/@user-gq4ym8we8x" title="YouTuber 1">
+                    <img src="https://yt3.googleusercontent.com/WX5dLVeYILAjhL1JP7p6YwpsGq2YOrcvruWZBn4fD9DZcEsPBFHTQMescNTVUOxTKE6up837=s160-c-k-c0x00ffffff-no-rj"
+                        alt="Creator 1">
+                </a>
+                <a href="https://www.youtube.com" title="YouTuber 2">
+                    <img src="https://yt3.googleusercontent.com/b-rnLDEPMIwWH-hPvb_twU3cFTrURAaUdzVUV4Ojxjz8lHlSclo05ZPE8wogPVZ1ao3SGVAB=s160-c-k-c0x00ffffff-no-rj"
+                        alt="Creator 2">
+                </a>
+                <a href="https://www.youtube.com/@superprestige1" title="YouTuber 3">
+                    <img src="https://yt3.googleusercontent.com/MxHAijT9dHY0Q_-dC3KrwOK76Rr5R1fo-lmeyxxJsFOc8bAfX6-L2wst5qmxDe1vpL3tIRDOgA=s176-c-k-c0x00ffffff-no-rj-mo"
+                        alt="Creator 3">
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact & Socials Section with 3D Tilt -->
+        <section id="contact" class="contact-section tilt-card">
+            <h2 class="section-title">Rejoignez la Communauté</h2>
+            
+            <!-- Social Media Buttons -->
+            <div class="contact-socials">
+                <a href="https://www.youtube.com/channel/UCwF9BH0ky0MjOhLX8_3zWcg" title="YouTube">
+                    <img src="assets/youtube.png" alt="YouTube">
+                </a>
+                <a href="https://www.tiktok.com/@bxanime01" title="TikTok">
+                    <img src="assets/tik-tok.png" alt="TikTok">
+                </a>
+                <a href="https://www.instagram.com/bxa_short/" title="Instagram">
+                    <img src="assets/instagram.png" alt="Instagram">
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>cody by Anisaphir. &copy; 2026 All rights reserved .</p>
+    </footer>
+
+    <!-- Custom Right Click Menu -->
+    <div id="custom-context-menu" class="context-menu">
+        <div class="menu-header">
+            <span class="menu-brand">ANISAPHIR</span>
+        </div>
+        <ul class="menu-options">
+            <li class="menu-item" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <span class="menu-icon">🏠</span>
+                <span>Accueil</span>
+            </li>
+            <li class="menu-item"
+                onclick="document.getElementById('presentation').scrollIntoView({behavior: 'smooth'})">
+                <span class="menu-icon">ℹ️</span>
+                <span>À propos</span>
+            </li>
+            <li class="menu-item" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                <span class="menu-icon">✉️</span>
+                <span>Contact</span>
+            </li>
+            <div class="menu-divider"></div>
+            <li class="menu-item" id="context-theme-btn">
+                <span class="menu-icon">🎨</span>
+                <span>Changer de thème</span>
+            </li>
+            <li class="menu-item" onclick="location.reload()">
+                <span class="menu-icon">🔄</span>
+                <span>Actualiser</span>
+            </li>
+            <li class="menu-item" id="context-copy-btn">
+                <span class="menu-icon">🔗</span>
+                <span>Copier le lien</span>
+            </li>
+        </ul>
+    </div>
+
+    <script src="js/scripte.js"></script>
+</body>
+
+</html>
